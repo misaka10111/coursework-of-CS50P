@@ -1,22 +1,18 @@
 # NUMB3RS
 import re
-import sys
 
 
 def main():
     print(validate(input("IPv4 Address: ")))
 
 
-def validate(ip: str) -> bool:
-    if not re.fullmatch(r"\d+\.\d+\.\d+\.\d+", ip):
+def validate(ip):
+    number = r"(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])"
+    matches = re.search(rf"^{number}\.{number}\.{number}\.{number}$", ip.strip())
+    if matches:
+        return True
+    else:
         return False
-
-    parts = ip.split(".")
-    for part in parts:
-        if not 0 <= int(part) <= 255:
-            return False
-
-    return True
 
 
 if __name__ == "__main__":
