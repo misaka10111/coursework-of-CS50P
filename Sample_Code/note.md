@@ -10,23 +10,23 @@
 - `\w`  word char + number + _
 - `\W`  not a word char
 - `\b`  word boundary
-
+- `[a]` set of char can be matched (the whole [] is 1 char)
+- `[^a]`complement of the set
 ### Quantifiers
 - `*`   0 or more repetitions
 - `+`   1 or more repetitions
 - `?`   0 or 1 repetition
 - `a|b` a or b
+- `{n}`   n repetitions
+- `{n,}`  at least n repetitions
+- `{n,m}` n~m repetitions
 ### Structure
 - `^`   start of string
 - `$`   end of string
 - `(a)` group
     - (\w)+ VS (\w+): first will create n groups (n is length of \w) while second one will have 1 group of all \w
-- (?:a) non-captruing group (not included by .group() method)
-- [a]   set of char can be matched (the whole [] is 1 char)
-- [^a]  complement of the set
-- {n}   n repetitions
-- {n,}  at least n repetitions
-- {n,m} n~m repetitions
+- `(?:a)`   non-captruing group (not included by .group() method)
+
 
 ## Data type
 - "": string; essentially a list
