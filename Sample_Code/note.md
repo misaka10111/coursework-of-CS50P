@@ -26,14 +26,18 @@
 - `(a)` group
     - (\w)+ VS (\w+): first will create n groups (n is length of \w) while second one will have 1 group of all \w
 - `(?:a)`   non-captruing group (not included by .group() method)
+- `(?P<a>b)`
+  - a: group name
+  - b: regex  
+  - use `.group("a")` to get group
 
 
 ## Data type
-- "": string; essentially a list
-- (): tuple
-- []: list
-- {}: dictionary
-- set(): set
+- `""`: string; essentially a list
+- `()`: tuple
+- `[]`: list
+- `{}`: dictionary
+- `set()`: set
     - unique: no repeat items
     - unordered
     - mutable
@@ -41,17 +45,17 @@
 
 ## Operator
 ### Set Operator: only works for set()
-- | or .union()
-- & or .intersection()
-- - or .difference()
-- ^ or .symmetric_difference(): union-intersection
-- |= or .update(): add elements in b set to a set
-- &= or .intersection_update(): only keep elements in intersection
-- -= or .difference_update()
-- ^= or symmetric_difference_update()
-- <= or .issubset()
-- >= or .issuperset()
-- .isdisjoint()
+- `|` or `.union()`
+- `&` or `.intersection()`
+- `-` or `.difference()`
+- `^` or `.symmetric_difference()`: union-intersection
+- `|=` or `.update()`: add elements in b set to a set
+- `&=` or `.intersection_update()`: only keep elements in intersection
+- `-=` or `.difference_update()`
+- `^=` or `symmetric_difference_update()`
+- `<=` or `.issubset()`
+- `>=` or `.issuperset()`
+- `.isdisjoint()`
 
 ## Keywords
 - global: use before a local variable
